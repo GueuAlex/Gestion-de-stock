@@ -56,8 +56,6 @@
                                  <span><?php
                                     if($value->idRole == 1){
                                         $role = 'Administrateur';
-                                    }elseif($value->idRole == 2){
-                                        $role = 'Sous-admin';
                                     }else{
                                         $role =' utilisateur';
                                     }
@@ -224,7 +222,7 @@
                                        
                                           
                                             <?php
-                                                $article->getCurrenteUserArt($session_id, 1);
+                                                $article->getCurrenteUserArt($session_id, 2);
                                             ?>
                                                
                                          
@@ -236,7 +234,7 @@
                                         <!----------------Mes telephones--------------->
                                         <!---------------------------------------------->
                                         <?php
-                                            $article->getCurrenteUserArt($session_id, 5);
+                                            $article->getCurrenteUserArt($session_id, 3);
                                         ?>
 
                                     </div>
@@ -247,7 +245,7 @@
                                         <!----------------Mes Ordi----------------------->
                                         <!---------------------------------------------->
                                         <?php
-                                            $article->getCurrenteUserArt($session_id, 3);
+                                            $article->getCurrenteUserArt($session_id, 4);
                                         ?>
                                     </div>
 
@@ -257,7 +255,7 @@
                                         <!----------------Mes chaussures---------------->
                                         <!---------------------------------------------->
                                         <?php
-                                            $article->getCurrenteUserArt($session_id, 2);
+                                            $article->getCurrenteUserArt($session_id, 1);
                                         ?>
     
                                     </div>
@@ -268,7 +266,7 @@
                                         <!----------------Mes Voitures------------------>
                                         <!---------------------------------------------->
                                         <?php
-                                            $article->getCurrenteUserArt($session_id, 4);
+                                            $article->getCurrenteUserArt($session_id, 5);
                                         ?>
                                        
                                     </div>

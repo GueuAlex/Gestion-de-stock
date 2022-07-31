@@ -22,7 +22,7 @@ CREATE Table utilisateur(
     prenomUtim VARCHAR(40) NOT NULL,
     contUtil VARCHAR(25) NOT NULL,
     loginUtil VARCHAR(10) NOT NULL,
-    passwordUtil VARCHAR(50) NOT NULL,
+    passwordUtil VARCHAR(255) NOT NULL,
     idRole INT(15) NOT NULL,
     constraint pk_matUtil PRIMARY KEY(matUtil),
     constraint fk_idRole FOREIGN KEY(idRole) REFERENCES role(idRole)
@@ -41,3 +41,16 @@ CREATE Table article(
     constraint fk_matUtil FOREIGN KEY(matUtil) REFERENCES utilisateur(matUtil),
     constraint fk_idCat FOREIGN KEY(idCat) REFERENCES categorie(idCat)
 );
+
+
+INSERT INTO categorie(idCat, libCat)
+VALUES(1, 'chaussures'),
+    (2, 'vetements'),
+    (3, 'telephone'),
+    (4, 'ordi'),
+    (5, 'voiture');
+
+
+INSERT INTO role(idRole, libRole)
+VALUES(1, 'Administrateur'),
+    (2, 'Utilisateur');
